@@ -32,6 +32,6 @@ public class Review {
 
     @Override
     public String toString() {
-        return "Review from=" + username + ", Rating=" + rating + ", Comments=" + comments + "]";
+        return "\nReview from=" + username + "\nRating=" + rating + "Comments=" + comments + "";
     }
 }

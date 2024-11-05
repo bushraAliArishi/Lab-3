@@ -94,7 +94,7 @@ public class Main {
                     } else System.out.println("your cart is empty ");
                 case 4:
                     System.out.println("enter search key ");
-                    String search = scanner.nextLine();
+                    String search = scanner.next();
                     if(store.searchBook(search)==null){
                         System.out.println("didn't find the book");
                     }else store.searchBook(search).toString();
@@ -107,15 +107,14 @@ public class Main {
 
                     break;
                 case 6:
-                    for (int i = 0; i < addMediaList.size(); i++) {
-                        System.out.println((i+1)+" :"+addMediaList.get(i).toString());
+                    for (int i = 0; i < store.getMediaList().size(); i++) {
+                        System.out.println((i+1)+" :"+store.getMediaList().get(i).toString());
                     }
                     System.out.println("enter the item number to add to the cart or -1 to exit");
-                    int itmeAddRun=scanner.nextInt();
-                    while (itmeAddRun!=-1) {
+                    while (true) {
                         int itmeAdd = scanner.nextInt();
                         if (itmeAdd > 0) {
-                            user.addToCart(addMediaList.get(itmeAdd-1));
+                            user.addToCart(store.getMediaList().get(itmeAdd-1));
                             System.out.println("the item added ");
                         } else break;
                     }
@@ -124,8 +123,7 @@ public class Main {
                                 System.out.println((i+1)+" :"+user.getShoppingCart().get(i).toString());
                             }
                     System.out.println("enter the item number to remove to the cart or -1 to exit");
-                    itmeAddRun=scanner.nextInt();
-                    while (itmeAddRun!=-1) {
+                    while (true) {
                                 int itmeAdd = scanner.nextInt();
                                 if (itmeAdd > 0) {
                                     user.removeFromCart(user.getShoppingCart().get(itmeAdd-1));

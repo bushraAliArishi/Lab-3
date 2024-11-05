@@ -65,6 +65,6 @@ public class Book extends Media {
 
 
     public String toString() {
-        return super.toString() + "Quantity in stock=" + quantityInStock + "]";
+        return super.toString() + " Quantity in stock=" + quantityInStock + " ";
     }
 }

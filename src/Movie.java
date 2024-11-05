@@ -34,6 +34,6 @@ public class Movie extends Media {
     }
 
     public String toString() {
-        return super.toString() + "Duration=" + duration + " minutes]";
+        return super.toString() + " Duration=" + duration + " minutes ";
     }
 }

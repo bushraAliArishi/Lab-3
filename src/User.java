@@ -92,6 +92,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "client name=" + username + ", Email=" + email + "]";
+        return "\nclient name=" + username + " Email=" + email + "";
     }
 }
