@@ -107,9 +107,7 @@ public class Main {
 
                     break;
                 case 6:
-                    for (int i = 0; i < store.getMediaList().size(); i++) {
-                        System.out.println((i+1)+" :"+store.getMediaList().get(i).toString());
-                    }
+
                     System.out.println("enter the item number to add to the cart or -1 to exit");
                     while (true) {
                         int itmeAdd = scanner.nextInt();

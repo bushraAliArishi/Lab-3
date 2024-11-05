@@ -117,8 +117,8 @@ public class Store {
     }
 
     public void displayMedias() {
-        for (Media media : mediaList) {
-            System.out.println(media);
+        for (int i = 0; i < getMediaList().size(); i++) {
+            System.out.println((i+1)+" :"+getMediaList().get(i).toString());
         }
     }
 
