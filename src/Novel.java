@@ -20,6 +20,6 @@ public class Novel extends Book {
 
 
     public String toString() {
-        return super.toString() + " Genre=" + genre + " ";
+        return super.toString() + " \n    Genre=" + genre + " ";
     }
 }

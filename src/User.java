@@ -75,7 +75,7 @@ public class User {
                 System.out.println("rating");
                 int rating=scanner.nextInt();
                 System.out.println("comment");
-                String comment=scanner.nextLine();
+                String comment=scanner.nextLine();scanner.next();
                 myReview.setUsername(getUsername());
                 myReview.setRating(rating) ;
                 myReview.setComments(comment) ;

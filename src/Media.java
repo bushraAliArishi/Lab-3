@@ -32,6 +32,6 @@ public class Media {
 
     @Override
     public String toString() {
-        return "Title:" + title + " Auteur=" + auteur + " ISBN=" + ISBN + " Price=" + price + "";
+        return "Title:" + title +"\n    Auteur=" + auteur + "\n    ISBN=" + ISBN + " \n    Price=" + price + "";
     }
 }

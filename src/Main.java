@@ -92,13 +92,13 @@ public class Main {
 
                         user.checkout();
                     } else System.out.println("your cart is empty ");
+                    break;
                 case 4:
                     System.out.println("enter search key ");
                     String search = scanner.next();
                     if(store.searchBook(search)==null){
                         System.out.println("didn't find the book");
                     }else store.searchBook(search).toString();
-
                     break;
                 case 5:if (user.getPurchasedMedia().size()>0){
                     user.getPurchasedMedia().toString();
@@ -107,15 +107,16 @@ public class Main {
 
                     break;
                 case 6:
-
                     System.out.println("enter the item number to add to the cart or -1 to exit");
                     while (true) {
                         int itmeAdd = scanner.nextInt();
                         if (itmeAdd > 0) {
                             user.addToCart(store.getMediaList().get(itmeAdd-1));
                             System.out.println("the item added ");
-                        } else break;
+                        } else
+                            break;
                     }
+                    break;
                 case 7:
                     for (int i = 0; i < user.getShoppingCart().size(); i++) {
                                 System.out.println((i+1)+" :"+user.getShoppingCart().get(i).toString());

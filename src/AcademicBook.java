@@ -20,6 +20,6 @@ public class AcademicBook extends Book {
 
 
     public String toString() {
-        return super.toString() + " Subject=" + subject + "";
+        return super.toString() + " \n    Subject=" + subject + "";
     }
 }
