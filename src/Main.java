@@ -4,11 +4,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Welcome to the Online Media Store!");
-        System.out.print("Enter your username: ");
-        String username = scanner.nextLine();
+        System.out.println("Welcome to the Online Media Store! ");
+
+        while (true){
+
+        System.out.print("\nEnter your username or enter out to exit: ");
+        String username = scanner.next();
+        if(!username.equals("out")){
         System.out.print("Enter your email: ");
-        String email = scanner.nextLine();
+        String email = scanner.next();
         User user = new User();
         user.setUsername(username);
         user.setEmail(email);
@@ -77,7 +81,8 @@ public class Main {
             System.out.println("5. View Purchased Media");//printMedia
             System.out.println("6. Add Media to Cart");
             System.out.println("7. Remove from Media to Cart");
-            System.out.println("8. Exit");
+            System.out.println("8. see user list");
+            System.out.println("9. Exit");
 
             System.out.print("Select ");
             int choice = scanner.nextInt();
@@ -131,14 +136,19 @@ public class Main {
                             }
                     break;
                         case 8:
+                            store.displayUsers();
+
+                            break;
+                            case 9:
                             System.out.println("Exiting the Media Store. \nThank you for visiting!");
                             display=false;
                             break;
-
-
-
+                default:
+                    System.out.println("the potion from  1 to 9");
             }
         }
+        }else break;
+    }
     }
 
 }
